@@ -11,6 +11,7 @@
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",
     "@lottiefiles/dotlottie-react": "^0.7.2",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.3.2",
     "next": "14.2.5",
     "react": "^18",

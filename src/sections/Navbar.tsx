@@ -1,9 +1,15 @@
+'use client';
+
+import React, { useState } from "react";
 import LogoIcon from '@/assets/logo.svg'
+import Link from "next/link";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 
 
 
+function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
 
-export const Header = () => {
   return <header className="py-4 border-b border-white/15 md:border-none max-w-2xl mx-auto">
     <div className="container">
       <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl">
@@ -27,7 +33,11 @@ export const Header = () => {
             </div>
            
             
-            <span>Contact Us</span>
+            <Link href={"/contact"}>
+            <MenuItem setActive={setActive} active={active} item="Contact Us">
+            
+            </MenuItem>
+            </Link>
           </button>
         </div>
       </div>
@@ -36,4 +46,4 @@ export const Header = () => {
 };
 
 
-export default Header;
+export default Navbar;
