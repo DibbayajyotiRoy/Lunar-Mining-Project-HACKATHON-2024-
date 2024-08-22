@@ -21,7 +21,6 @@ function Navbar({ className }: { className?: string }) {
         <div className="hidden md:block">
           <nav className="flex gap-8 text-sm">
             <a className="text-white/70 hover:text-white transition" href='#'>Features</a>
-            <a className="text-white/70 hover:text-white transition" href='#'>Developers</a>
           </nav>
         </div>
         <div className="flex gap-4 items-center">
