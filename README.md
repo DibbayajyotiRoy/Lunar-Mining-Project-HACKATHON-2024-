@@ -20,6 +20,7 @@ Environmental Sustainability: By identifying the most abundant and accessible mi
 ### Dependencies
 
 The project is built using a combination of technologies:
+
 Frontend: Developed with Next.js and Tailwind CSS for a responsive user interface, allowing users to interact with the system seamlessly.
 
 Backend: Flask and FastAPI are utilized to handle API requests and manage data processing.
