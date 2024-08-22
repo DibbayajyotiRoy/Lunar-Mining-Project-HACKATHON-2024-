@@ -77,4 +77,4 @@ Contributors names and contact info
 
 ## Credits
 
-The dataset for this project was taken from RELAB (https://sites.brown.edu/relab/lunar-rock-and-mineral-characterization-database/) 
+The dataset for this project was taken from RELAB samples of Apollo 17 site  (https://sites.brown.edu/relab/lunar-rock-and-mineral-characterization-database/) 
