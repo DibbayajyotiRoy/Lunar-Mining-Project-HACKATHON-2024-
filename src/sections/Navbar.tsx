@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import LogoIcon from '@/assets/logo.svg'
 import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
-
+import Features from "@/sections/Features";
 
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
 
-  return <header className="py-4 border-b border-white/15 md:border-none max-w-2xl mx-auto">
+  return <header className="py-4 border-b border-white/15 md:border-none max-w-2xl mx-auto stroke-white">
     <div className="container">
       <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl">
         <div>
@@ -20,7 +20,12 @@ function Navbar({ className }: { className?: string }) {
         </div>
         <div className="hidden md:block">
           <nav className="flex gap-8 text-sm">
-            <a className="text-white/70 hover:text-white transition" href='#'>Features</a>
+            <a className="text-white/70 hover:text-white transition" href='#'>About</a>
+          </nav>
+        </div>
+        <div className="hidden md:block">
+          <nav className="flex gap-8 text-sm">
+            <a className="text-white/70 hover:text-white transition" href='#Features'>Mineral Predictor</a>
           </nav>
         </div>
         <div className="flex gap-4 items-center">
