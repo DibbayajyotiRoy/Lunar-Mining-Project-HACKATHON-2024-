@@ -57,7 +57,7 @@ const Features: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white flex items-center justify-center min-h-screen relative">
+    <div className="bg-black to-blue-900 text-white flex items-center justify-center min-h-screen relative">
       <motion.div
         className="bg-gray-800 p-8 rounded-lg shadow-lg w-1/3 relative z-10"
         initial={{ opacity: 0, y: -50 }}

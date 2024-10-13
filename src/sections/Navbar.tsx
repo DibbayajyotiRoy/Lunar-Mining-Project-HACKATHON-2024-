@@ -20,12 +20,12 @@ function Navbar({ className }: { className?: string }) {
         </div>
         <div className="hidden md:block">
           <nav className="flex gap-8 text-sm">
-            <a className="text-white/70 hover:text-white transition" href='#'>About</a>
+            <a className="text-white/70 hover:text-white transition" href='@/src/sections/Hero.tsx'>About</a>
           </nav>
         </div>
         <div className="hidden md:block">
           <nav className="flex gap-8 text-sm">
-            <a className="text-white/70 hover:text-white transition" href='#Features'>Mineral Predictor</a>
+            <a className="text-white/70 hover:text-white transition" href='/Features.tsx'>Mineral Predictor</a>
           </nav>
         </div>
         <div className="flex gap-4 items-center">
