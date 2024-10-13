@@ -17,6 +17,7 @@
     "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.3",
     "three": "^0.169.0"
   },
