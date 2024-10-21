@@ -21,8 +21,13 @@ export function Hero() {
       title: "2017-2030",
       content: (
         <div>
+<<<<<<< HEAD
           <p className="text-white text-sm font-normal mb-4">
             The <b>Artemis program</b> is NASA's initiative to return humans to the Moon, aiming for sustainable exploration. It includes missions like Artemis I, which successfully orbited the Moon in 2022, and upcoming Artemis II, a crewed lunar flyby planned for 2025. The program also targets Mars as a long-term goal.
+=======
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          The <b>Artemis program</b> is NASA&apos;s initiative to return humans to the Moon, aiming for sustainable exploration. It includes missions like Artemis I, which successfully orbited the Moon in 2022, and upcoming Artemis II, a crewed lunar flyby planned for 2025. The program also targets Mars as a long-term goal.
+>>>>>>> bd965f52ef226de53c951e841e56f7c40b8b91f1
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {[artemis1, artemis2, artemis3, lunarBackground].map((src, index) => (
