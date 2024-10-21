@@ -1,53 +1,102 @@
 'use client';
 
 import React, { useState } from "react";
-import LogoIcon from '@/assets/logo.svg'
+import LogoIcon from '@/assets/logo.svg';
 import Link from "next/link";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
-import Features from "@/sections/Features";
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
+const Navbar: React.FC<{ className?: string }> = ({ className }) => {
+  const [active, setActive] = useState<string>("mining-site");
+  const router = useRouter();
 
-function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+  const handleNavClick = (path: string) => {
+    setActive(path);
+    router.push(path);
+  };
 
-  return <header className=" py-4 border-b border-white/15 md:border-none max-w-2xl mx-auto stroke-white">
-    <div className="container ">
-      <div className="bg-white dark:bg-neutral-950  flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl">
-        <div>
-          <div className='border h-10 w-10 rounded-lg inline-flex justify-center items-center border-white/15'>
-          <LogoIcon className="h-8 w-8" />
+  return (
+    <header className={`fixed top-0 left-0 w-full z-50 ${className}`}>
+      <motion.div
+        className="container mx-auto flex justify-between items-center px-6 py-4 bg-black rounded-full border border-white/10 shadow-lg backdrop-blur-lg"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="flex items-center gap-4">
+          <div className="border h-12 w-12 rounded-full flex justify-center items-center border-white/30 glow-effect">
+            <LogoIcon className="h-10 w-10 text-white" />
           </div>
+          <h1 className="text-white text-2xl font-bold tracking-wider">Lunar Mining</h1>
         </div>
-        <div className="hidden md:block">
-          <nav className="flex gap-8 text-sm">
-            <a className="text-white/70 hover:text-white transition" href='@/src/sections/Hero.tsx'>About</a>
-          </nav>
-        </div>
-        <div className="hidden md:block">
-          <nav className="flex gap-8 text-sm">
-            <a className="text-white/70 hover:text-white transition" href='/Features.tsx'>Mineral Predictor</a>
-          </nav>
-        </div>
-        <div className="flex gap-4 items-center">
-          <button className="relative border py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#190d2e] to-[#4a208a] shadow-[0px_0px_12px_#8c45ff]">
-            <div className="absolute inset-0">
-            <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
-            <div className="rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
-            <div className="absolute inset-0 shadow[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg"></div>
-            </div>
-           
-            
-            <Link href={"/contact"}>
-            <MenuItem setActive={setActive} active={active} item="Contact Us">
-            
-            </MenuItem>
-            </Link>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-};
+        <nav className="flex items-center gap-8 text-white text-sm">
+          <Link href="/mining-site">
+            <motion.span
+              className={`nav-button ${active === 'mining-site' ? 'active' : ''}`}
+              onClick={() => handleNavClick('/mining-site')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Mining Site
+            </motion.span>
+          </Link>
+          <Link href="/contact">
+            <motion.span
+              className={`nav-button ${active === 'contact' ? 'active' : ''}`}
+              onClick={() => handleNavClick('/contact')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+            </motion.span>
+          </Link>
+        </nav>
+      </motion.div>
 
+      <style jsx>{`
+        .nav-button {
+          padding: 0.75rem 1.25rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          background: linear-gradient(145deg, #5e4e9c, #4b3f79);
+          border: 2px solid #9c77d1;
+          border-radius: 9999px;
+          color: white;
+          box-shadow: 0px 0px 12px #9c77d1;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          display: inline-block;
+        }
+
+        .nav-button:hover {
+          box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+          border-color: #ffffff;
+        }
+
+        .active {
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 0px 20px #9c77d1;
+        }
+
+        .glow-effect {
+          box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5), inset 0px 0px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes radium-glow {
+          0% {
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.7);
+          }
+          50% {
+            box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+          }
+          100% {
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.7);
+          }
+        }
+      `}</style>
+    </header>
+  );
+};
 
 export default Navbar;

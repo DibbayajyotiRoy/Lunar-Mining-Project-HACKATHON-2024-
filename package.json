@@ -1,6 +1,7 @@
 {
   "name": "ai-startup-landing-page",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,12 +14,12 @@
     "@lottiefiles/dotlottie-react": "^0.7.2",
     "@react-three/fiber": "^8.17.10",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.8",
+    "framer-motion": "^11.11.9",
     "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "simplex-noise": "^4.0.3",
-    "tailwind-merge": "^2.5.3",
+    "tailwind-merge": "^2.5.4",
     "three": "^0.169.0"
   },
   "devDependencies": {

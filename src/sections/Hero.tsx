@@ -21,82 +21,46 @@ export function Hero() {
       title: "2017-2030",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          The <b>Artemis program</b> is NASA's initiative to return humans to the Moon, aiming for sustainable exploration. It includes missions like Artemis I, which successfully orbited the Moon in 2022, and upcoming Artemis II, a crewed lunar flyby planned for 2025. The program also targets Mars as a long-term goal.
+          <p className="text-white text-sm font-normal mb-4">
+            The <b>Artemis program</b> is NASA's initiative to return humans to the Moon, aiming for sustainable exploration. It includes missions like Artemis I, which successfully orbited the Moon in 2022, and upcoming Artemis II, a crewed lunar flyby planned for 2025. The program also targets Mars as a long-term goal.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-             src={artemis1}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={artemis2}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={artemis3}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={lunarBackground}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {[artemis1, artemis2, artemis3, lunarBackground].map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`Artemis mission image ${index + 1}`}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-44 shadow-lg"
+              />
+            ))}
           </div>
         </div>
       ),
     },
     {
-      title: "Aug,2021-Present",
+      title: "Aug, 2021-Present",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          <b>Universities Leading Lunar Mining Research</b><br />
-          Several universities are pioneering research in lunar mining technologies and resource utilization strategies.
+          <p className="text-white text-sm font-normal mb-4">
+            <b>Universities Leading Lunar Mining Research</b><br />
+            Several universities are pioneering research in lunar mining technologies and resource utilization strategies.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Institutions like Colorado School of Mines and Missouri S&T focus on autonomous construction and thermal mining techniques, respectively. They aim to develop sustainable methods for extracting resources from the Moon, contributing to future exploration and potential human habitation.
+          <p className="text-white text-sm font-normal mb-4">
+            Institutions like Colorado School of Mines and Missouri S&T focus on autonomous construction and thermal mining techniques, respectively. They aim to develop sustainable methods for extracting resources from the Moon, contributing to future exploration and potential human habitation.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-             src={uni1}
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={uni2}
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={uni3}
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={uni4}
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {[uni1, uni2, uni3, uni4].map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`University research image ${index + 1}`}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-44 shadow-lg"
+              />
+            ))}
           </div>
         </div>
       ),
@@ -105,60 +69,35 @@ export function Hero() {
       title: "Lunar Site",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          <b>About the Lunar Mining Optimization System</b><br />
-          The Lunar Mining Optimization System is an innovative platform designed to enhance lunar mining operations. Here are five key features that define its purpose and functionality:
+          <p className="text-white text-sm font-normal mb-4">
+            <b>About the Lunar Mining Optimization System</b><br />
+            The Lunar Mining Optimization System is an innovative platform designed to enhance lunar mining operations. Here are five key features that define its purpose and functionality:
           </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            🔍 Predict optimal mining sites using machine learning.            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            📊 Analyze spectral reflectance data for mineral identification.
-
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            🌱 Ensure sustainable resource utilization on the lunar surface.
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            🚀 Support mission planning for future lunar exploration.
-
-            </div>
-            
+          <div className="mb-4">
+            <ul className="list-disc list-inside text-white text-sm">
+              <li>🔍 Predict optimal mining sites using machine learning.</li>
+              <li>📊 Analyze spectral reflectance data for mineral identification.</li>
+              <li>🌱 Ensure sustainable resource utilization on the lunar surface.</li>
+              <li>🚀 Support mission planning for future lunar exploration.</li>
+            </ul>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-             src={min1}
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={min2}
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={min3}
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-             src={min4}
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {[min1, min2, min3, min4].map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`Mineral resource image ${index + 1}`}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-44 shadow-lg"
+              />
+            ))}
           </div>
         </div>
       ),
     },
   ];
+
   return (
     <div className="w-full">
       <Timeline data={data} />
