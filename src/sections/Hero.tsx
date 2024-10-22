@@ -21,7 +21,7 @@ export function Hero() {
       title: "2017-2030",
       content: (
         <div>
-          <p className="text-white text-sm font-normal mb-4">
+          <p className="text-white  text-sm font-normal mb-4">
             The <b>Artemis program</b> is NASA's initiative to return humans to the Moon, aiming for sustainable exploration. It includes missions like Artemis I, which successfully orbited the Moon in 2022, and upcoming Artemis II, a crewed lunar flyby planned for 2025. The program also targets Mars as a long-term goal.
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
